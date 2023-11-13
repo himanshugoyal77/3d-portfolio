@@ -2,26 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* // darkpurple #150b26 130b20
+// purple text 860dc3
+// light purple e39be2
+// dark 0f0a15 */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+
+.stroke {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+
+.parent {
+  height: 100vh;
+  width: 100vw;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.monster {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+#myVideo {
+  position: fixed;
+  left: 0;
+  z-index: -1;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 }
