@@ -8,30 +8,42 @@ import {
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Typewriter from "typewriter-effect";
 import Socials from "./Socials";
+import toast from "react-hot-toast";
 
 const HeroContent = () => {
+  const showToast = () => {
+    toast.success("Resume Started Downloading...", {
+      style: {
+        border: "3px solid #030014",
+        padding: "16px",
+        color: "#030014",
+      },
+      iconTheme: {
+        primary: "#030014",
+        secondary: "#FFFAEE",
+      },
+    });
+  };
+
   return (
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col md:flex-row items-center justify-between absolute px-8 md:px-20 mt-40 w-full z-[50]"
+      className="flex w-[90%] mx-auto
+      flex-row items-center justify-center px-20 mt-36
+      z-[20] "
     >
       <div
-        className="h-full w-full flex flex-col gap-5 justify-center m-auto
-       text-center
-      md:text-start"
+        className="h-full 
+      w-full flex flex-col gap-5 justify-center m-auto text-start"
       >
         <motion.div
           variants={slideInFromTop}
-          className="cursor-pointer Welcome-box py-[8px] px-[7px] border 
-          border-[#7042f88b] opacity-[0.9]
-          mx-auto md:mx-0 flex flex-row items-center justify-center gap-2
-          "
+          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1
             className="Welcome-text text-[13px]
-          
           "
           >
             Hola. Hello. Pardon. &nbsp;
@@ -82,15 +94,15 @@ const HeroContent = () => {
         >
           Creating innovative and user-friendly solutions to complex problems.
         </motion.p>
+
         <Socials />
         <motion.a
+          target="_blank"
+          onClick={showToast}
+          download="/resume/Himanshu Goyal Fullstack resume.pdf"
+          href="/resume/Himanshu Goyal Fullstack resume.pdf"
           variants={slideInFromLeft(1)}
-          className="py-2 my-4 button-primary text-center text-white 
-          cursor-pointer rounded-lg max-w-[200px]
-          hover:shadow-xl hover:scale-105 transform transition-all 
-          duration-200 ease-in-out
-          mx-auto md:mx-0 px-4 md:px-0
-          "
+          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
           Download Resume
         </motion.a>
@@ -98,15 +110,16 @@ const HeroContent = () => {
 
       <motion.div
         variants={slideInFromRight(0.8)}
-        className={`w-full h-full  justify-center items-center
-        animate-pulse duration-75 ease-out  md:flex
-       `}
+        className="w-full h-full
+         
+        flex justify-center items-center"
       >
         <img
-          src="/mainIconsdark.svg"
+          src="/self.png"
           alt="work icons"
-          height={450}
-          width={450}
+          className="absolute mt-20"
+          height={550}
+          width={550}
         />
       </motion.div>
     </motion.div>

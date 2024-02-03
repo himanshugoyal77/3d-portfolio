@@ -14,6 +14,34 @@ body {
 .cursive {
   font-family: "Cedarville Cursive", cursive;
 }
+
+.clip {
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+
+.hide-bg {
+  mix-blend-mode: multiply;
+  filter: contrast(1);
+}
+
+.glow {
+  text-shadow: 0 0 5px rgba(248, 247, 255, 0.8),
+    0 0 10px rgba(248, 247, 255, 0.8), 0 0 20px rgba(248, 247, 255, 0.8);
+  overflow: visible;
+}
+
+.glow:hover {
+  @apply scale-105 transition ease-linear duration-300;
+}
+
 .Welcome-text {
   background: linear-gradient(
       0deg,
@@ -68,4 +96,20 @@ body {
 }
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
+}
+
+.img {
+  animation: bubble 3s infinite ease-in-out;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
