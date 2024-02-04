@@ -3,6 +3,7 @@ import Hero from "./components/main/Hero";
 import "./index.css";
 import Sidebar from "./components/sub/Sidebar";
 import TimeLine from "./components/main/Timeline";
+import Skills from "./components/main/Skills";
 
 export default function App() {
   return (

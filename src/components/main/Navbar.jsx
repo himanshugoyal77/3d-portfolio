@@ -5,7 +5,7 @@ import ToggleButton from "../sub/ToggleButton";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  console.log(open);
+
   return (
     <div
       className="w-full h-[65px] fixed top-0  
@@ -63,7 +63,7 @@ const Navbar = () => {
               Projects
             </a>
 
-            <a href="#projects" className="cursor-pointer glow">
+            <a href="#education" className="cursor-pointer glow">
               Education
             </a>
             <a href="#projects" className="cursor-pointer glow">

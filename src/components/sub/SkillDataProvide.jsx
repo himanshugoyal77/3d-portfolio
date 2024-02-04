@@ -4,7 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const SkillDataProvider = ({ src, width, height, index }) => {
+const SkillDataProvider = ({ index, skill }) => {
+  const { image, name } = skill;
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -19,12 +20,13 @@ const SkillDataProvider = ({ src, width, height, index }) => {
     <motion.div
       ref={ref}
       initial="hidden"
+      className="flex flex-col items-center justify-center gap-3 text-white"
       variants={imageVariants}
       animate={inView ? "visible" : "hidden"}
-      custom={index}
       transition={{ delay: index * animationDelay }}
     >
-      <img src={src} width={width} height={height} alt="skill image" />
+      <img src={image} width={60} height={60} alt="skill image" />
+      <h4 className="text-white text-center">{name}</h4>
     </motion.div>
   );
 };
