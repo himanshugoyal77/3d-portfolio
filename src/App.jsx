@@ -1,6 +1,8 @@
 import { Toaster } from "react-hot-toast";
 import Hero from "./components/main/Hero";
 import "./index.css";
+import Sidebar from "./components/sub/Sidebar";
+import TimeLine from "./components/main/Timeline";
 
 export default function App() {
   return (

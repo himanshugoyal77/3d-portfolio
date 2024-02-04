@@ -1,27 +1,33 @@
+import { useState } from "react";
 import { Socials } from "../../constants/index";
+import Sidebar from "../sub/Sidebar";
+import ToggleButton from "../sub/ToggleButton";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  console.log(open);
   return (
     <div
       className="w-full h-[65px] fixed top-0  
-    bg-transparent z-50 px-10 "
+    bg-transparent z-50 md:px-10 "
     >
       <div
         className="
       w-full h-full flex flex-row items-center justify-between 
+      bg-[#030014]
       "
       >
-        <a href="" className="flex justify-center items-center gap-4">
+        <a
+          href=""
+          className="flex justify-center items-center gap-2 md:gap-4 
+      ml-[15px]"
+        >
           <img
             src="/logo.png"
             alt="logo"
-            height={35}
-            width={35}
             className="cursor-pointer hover:animate-slowspin
-             shadow-inner
-             rounded-full
-             shadow-white
-             bg-[#030014] 
+              w-[30px] h-[30px]
+              md:w-[35px] md:h-[35px]
             transition duration-300 ease-in-out transform hover:scale-110
             "
           />
@@ -33,8 +39,13 @@ const Navbar = () => {
           </a>
         </a>
 
+        <div className="h-[65px]  flex items-center justify-end mr-[10px]">
+          <Sidebar />
+        </div>
+
         <div
-          className="w-[500px] h-full hidden md:flex flex-row items-center justify-between
+          className="w-[500px] h-full hidden md:flex flex-row 
+          items-center justify-between
          "
         >
           <div
@@ -60,8 +71,6 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-
-        
       </div>
     </div>
   );

@@ -17,9 +17,9 @@ const Socials = () => {
     <motion.div
       variants={slideInFromLeft(0.9)}
       className="
-     w-full md:w-max
+     w-full md:w-max 
      cursor-pointer mb-4
-  flex items-center justify-center gap-3 md:gap-6
+  flex items-center justify-start gap-3 md:gap-6
   "
     >
       <a

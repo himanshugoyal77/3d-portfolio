@@ -29,17 +29,19 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex w-[90%] mx-auto
-      flex-row items-center justify-center px-20 mt-36
+      className="flex md:w-[90%] mx-auto flex-col
+      md:flex-row items-center justify-center px-10 md:px-20 mt-28 md:mt-36
       z-[20] "
     >
       <div
         className="h-full 
-      w-full flex flex-col gap-5 justify-center m-auto text-start"
+      w-full flex flex-col gap-5 justify-center m-auto md:text-start
+      "
       >
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+          className="Welcome-box py-[8px] px-[7px] border
+           border-[#7042f88b] opacity-[0.9]"
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1
@@ -56,7 +58,10 @@ const HeroContent = () => {
         >
           <span>
             I&apos;m
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+            <span
+              className="text-transparent bg-clip-text
+            bg-gradient-to-r from-purple-500 to-cyan-500"
+            >
               {" "}
               Himanshu <br />
             </span>
@@ -68,7 +73,7 @@ const HeroContent = () => {
                   "Software Engineer",
                   "Web Developer",
                   "Mobile Developer",
-                  "DevOps Engineer",
+                  "DevOps Learner",
                 ],
                 autoStart: true,
                 loop: true,
@@ -82,7 +87,7 @@ const HeroContent = () => {
 
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 mt-5 max-w-[600px] hidden md:block"
+          className="text-lg text-gray-400 md:mt-5 max-w-[600px] hidden md:block"
         >
           A Full Stack Software Engineer with experience in Website, Mobile, and
           Software development. Creating innovative and user-friendly solutions
@@ -111,13 +116,13 @@ const HeroContent = () => {
       <motion.div
         variants={slideInFromRight(0.8)}
         className="w-full h-full
-         
-        flex justify-center items-center"
+        hidden 
+        md:flex justify-center items-center"
       >
         <img
           src="/self.png"
           alt="work icons"
-          className="absolute mt-20"
+          className="absolute mt-20 "
           height={550}
           width={550}
         />

@@ -5,6 +5,9 @@ import "./index.css";
 import Spline from "@splinetool/react-spline";
 import StarCanvas from "./components/main/Starbackground.jsx";
 import Navbar from "./components/main/Navbar.jsx";
+import Sidebar from "./components/sub/Sidebar.jsx";
+import TimeLine from "./components/main/Timeline.jsx";
+import Skills from "./components/main/Skills.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,9 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     >
       <StarCanvas />
       <Navbar />
-      
       <App />
-
     </div>
   </React.StrictMode>
 );
