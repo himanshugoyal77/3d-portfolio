@@ -33,7 +33,7 @@ const Projects = () => {
           liveDemo="https://next-js-ecommerce-4bb3mjwa3-himanshugoyal77.vercel.app/"
         />
         <ProjectCard
-          title="Space Themed Website"
+          title="Live Discussion Forum"
           description="Discussion Forum website with realtime chat and comments feature using React and Socket.io"
           src="https://github.com/himanshugoyal77/discussion-forum/assets/92782099/08ebb30a-cbe8-4831-9e31-cb53094baf1b"
           liveDemo="https://h-forum.vercel.app"
