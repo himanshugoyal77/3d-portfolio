@@ -10,7 +10,7 @@ function TimeLine() {
       bg-clip-text bg-gradient-to-r from-purple-500 text-center
        to-cyan-500 py-20"
       >
-        Past Education & Workn Experience
+        Past Education & Work Experience
       </h1>
       <ul
         className="timeline timeline-snap-icon max-md:timeline-compact 

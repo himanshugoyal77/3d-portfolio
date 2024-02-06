@@ -66,7 +66,7 @@ const Navbar = () => {
             <a href="#education" className="cursor-pointer glow">
               Education
             </a>
-            <a href="#projects" className="cursor-pointer glow">
+            <a href="#contact" className="cursor-pointer glow">
               Contact
             </a>
           </div>

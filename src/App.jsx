@@ -4,6 +4,7 @@ import "./index.css";
 import Sidebar from "./components/sub/Sidebar";
 import TimeLine from "./components/main/Timeline";
 import Skills from "./components/main/Skills";
+import ContactForm from "./components/main/ContactForm";
 
 export default function App() {
   return (

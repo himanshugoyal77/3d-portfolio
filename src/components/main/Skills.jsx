@@ -26,7 +26,7 @@ const Skills = () => {
         Making apps with modern technologies
       </h1>
 
-      <div className="grid grid-cols-5 md:grid-cols-7 gap-12">
+      <div className="grid grid-cols-5 md:grid-cols-7 gap-1 md:gap-12">
         {skills.map((skill, index) => {
           return <SkillDataProvider key={index} skill={skill} index={index} />;
         })}

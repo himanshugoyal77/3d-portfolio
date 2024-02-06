@@ -26,7 +26,7 @@ const SkillDataProvider = ({ index, skill }) => {
       transition={{ delay: index * animationDelay }}
     >
       <img src={image} width={60} height={60} alt="skill image" />
-      <h4 className="text-white text-center">{name}</h4>
+      <h4 className="w-[80px] text-white text-center text-wrap">{name}</h4>
     </motion.div>
   );
 };
