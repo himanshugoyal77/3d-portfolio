@@ -15,7 +15,7 @@ const SkillDataProvider = ({ index, skill }) => {
     visible: { opacity: 1 },
   };
 
-  const animationDelay = 0.3;
+  const animationDelay = 0.11;
   return (
     <motion.div
       ref={ref}

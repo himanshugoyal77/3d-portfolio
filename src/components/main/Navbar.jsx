@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { Socials } from "../../constants/index";
 import Sidebar from "../sub/Sidebar";
-import ToggleButton from "../sub/ToggleButton";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
