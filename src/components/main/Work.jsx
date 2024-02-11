@@ -2,6 +2,11 @@ import React from "react";
 import ContactForm from "./ContactForm";
 
 const Work = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleClick = (img) => {
+    window.open(img, "_blank");
+  };
+
   return (
     <div className="relative w-full ">
       <ul
@@ -30,6 +35,19 @@ const Work = () => {
               JunoTerra Technology
             </div>
           </div>
+          <div
+            onClick={() => handleClick("/public/junoterra-certificate.jpg")}
+            className="mt-4 timeline-end h-28 w-20 rounded-md object-cover md:text-end mb-10"
+          >
+            <img
+              title="Click to view certificate"
+              className="h-full w-full 
+              cursor-pointer rounded-md
+              hover:scale-110 transition duration-300 ease-in-out "
+              src="/public/junoterra-certificate.jpg"
+              alt=""
+            />
+          </div>
           <hr />
         </li>
         <li>
@@ -48,10 +66,23 @@ const Work = () => {
               />
             </svg>
           </div>
-          <div className="timeline-end mb-10">
-            <time className="font-mono italic">Jan 2023 - Apr 2023</time>
+          <div className="timeline-start md:timeline-end mb-10">
+            <time className="font-mono italic">Jan 2023 - May 2023</time>
             <div className="text-lg font-black">CSI VESIT</div>
             <div className="text-lg">Jr.Technical Officer</div>
+          </div>
+          <div
+            onClick={() => handleClick("/public/csi-certificate.jpg")}
+            className="md:timeline-start timeline-end h-28 w-36 rounded-md object-cover md:text-end mb-10"
+          >
+            <img
+              title="Click to view certificate"
+              className="h-full w-full 
+              cursor-pointer rounded-md
+              hover:scale-110 transition duration-300 ease-in-out "
+              src="/public/csi-certificate.jpg"
+              alt=""
+            />
           </div>
           <hr />
         </li>

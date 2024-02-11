@@ -31,7 +31,7 @@ function TimeLine() {
               />
             </svg>
           </div>
-          <div className="timeline-start md:text-end mb-10">
+          <div className="timeline-start md:text-end pb-6">
             <time className="font-mono italic">2019</time>
             <div className="text-lg">SSC - class 10th</div>
             <div className="text-lg font-black text-white">

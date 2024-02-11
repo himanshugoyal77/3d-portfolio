@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
   const inputStyle =
     "w-full bg-white border border-gray-300 rounded-md text-sm p-2 focus:outline-none focus:border-indigo-500";
   const options = {
@@ -23,7 +24,7 @@ const ContactForm = () => {
   const form = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form.current);
+    setLoading(true);
     emailjs
       .sendForm(
         "service_395xd0o",
@@ -33,6 +34,7 @@ const ContactForm = () => {
       )
       .then((res) => {
         console.log(res);
+        setLoading(false);
         if (res.status === 200) {
           toast.success("Message Send Successfull!", {
             style: {
@@ -142,7 +144,11 @@ const ContactForm = () => {
              text-white font-bold my-2 rounded-md 
             bg-indigo-800 hover:shadow-slate-500 ease-in duration-300"
           >
-            <span className="text-sm">SEND MESSAGE</span>
+            <span
+              className={`text-sm ${loading ? "loading loading-spinner" : ""}`}
+            >
+              SEND MESSAGE
+            </span>
           </button>
         </form>
       </div>

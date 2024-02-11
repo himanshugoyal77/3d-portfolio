@@ -1,17 +1,16 @@
 import React from "react";
 
-const ProjectCard = ({
-  isImage = false,
-  src,
-  title,
-  description,
-  liveDemo,
-  githubRepo,
-}) => {
+const ProjectCard = ({ project }) => {
+  const { title, description, src, isImage, liveDemo, githubRepo, id } =
+    project;
   return (
     <div
+      id={`project-${id}`}
       className="relative overflow-hidden rounded-lg shadow-lg 
-    border w-full border-[#2A0E61] md:h-[420px]"
+    border w-full border-[#2A0E61] md:h-[420px]
+    transition duration-500 ease-in-out transform hover:scale-105
+    animate-fadeInUp 
+    "
     >
       {!isImage ? (
         <video
