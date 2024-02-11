@@ -36,7 +36,7 @@ const Work = () => {
             </div>
           </div>
           <div
-            onClick={() => handleClick('"/junoterra-certificate.jpg"')}
+            onClick={() => handleClick("/junoterra-certificate.jpg")}
             className="mt-4 timeline-end h-28 w-20 rounded-md object-cover md:text-end mb-10"
           >
             <img
