@@ -23,7 +23,11 @@ const ProjectCard = ({
           className="h-[250px] w-full object-cover"
         />
       ) : (
-        <img src={src} alt={title} className="h-[250px] w-full object-cover" />
+        <img
+          src={src}
+          alt={title}
+          className="h-[250px] w-full object-contain bg-white"
+        />
       )}
 
       <div className=" p-4">

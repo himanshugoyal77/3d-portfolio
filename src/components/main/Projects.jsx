@@ -55,6 +55,14 @@ const Projects = () => {
           liveDemo="undefined"
           githubRepo="https://github.com/himanshugoyal77/salon-booking-app"
         />
+        <ProjectCard
+          title="React.js Jenkins CI/CD Pipeline"
+          description="CI/CD pipeline for React.js app with Docker, Jenkins and Sonarqube code Analysis"
+          src="/cicd.png"
+          isImage={true}
+          liveDemo="https://hub.docker.com/repository/docker/himanshug77/quizly/general"
+          githubRepo="https://github.com/himanshugoyal77/casualFunnel-Quiz"
+        />
       </div>
     </div>
   );
