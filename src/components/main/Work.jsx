@@ -36,7 +36,7 @@ const Work = () => {
             </div>
           </div>
           <div
-            onClick={() => handleClick("/public/junoterra-certificate.jpg")}
+            onClick={() => handleClick('"/junoterra-certificate.jpg"')}
             className="mt-4 timeline-end h-28 w-20 rounded-md object-cover md:text-end mb-10"
           >
             <img
@@ -44,7 +44,7 @@ const Work = () => {
               className="h-full w-full 
               cursor-pointer rounded-md
               hover:scale-110 transition duration-300 ease-in-out "
-              src="/public/junoterra-certificate.jpg"
+              src="/junoterra-certificate.jpg"
               alt=""
             />
           </div>
@@ -72,7 +72,7 @@ const Work = () => {
             <div className="text-lg">Jr.Technical Officer</div>
           </div>
           <div
-            onClick={() => handleClick("/public/csi-certificate.jpg")}
+            onClick={() => handleClick("/csi-certificate.jpg")}
             className="md:timeline-start timeline-end h-28 w-36 rounded-md object-cover md:text-end mb-10"
           >
             <img
@@ -80,7 +80,7 @@ const Work = () => {
               className="h-full w-full 
               cursor-pointer rounded-md
               hover:scale-110 transition duration-300 ease-in-out "
-              src="/public/csi-certificate.jpg"
+              src="/csi-certificate.jpg"
               alt=""
             />
           </div>
